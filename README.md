@@ -20,6 +20,18 @@ Run migrations with `rails db:migrate`
 
 Run `rails s` to start the project in development mode
 
+### Development version with Docker
+
+If you want to use Docker to run the development version of the project, build and run it following commands:
+
+```bash
+docker build -t rails_example .
+docker build run --name rails_test -p 3000:3000 rails_example
+```
+
+And open localhost:3000 in your favourite web browser.
+
+
 ## For production version
 
 Run migrations with `rails db:migrate RAILS_ENV=production`
